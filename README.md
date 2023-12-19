@@ -2,6 +2,25 @@
 
 This template is meant to be used in back-end development. 
 
+## Requirements 
+This template requires a local redis server running on `127.0.0.1:7000` . 
+To set up locally do this: 
+
+1. Spin a Redis in Docker server and cluster
+```cmd
+docker run -e "IP=0.0.0.0" -p 7000-7005:7000-7005 grokzen/redis-cluster:latest
+```
+2. Then inside the container terminal 
+```cmd
+redis-cli -c -p 7000
+```
+3. And then set protected-mode to "no"
+```cmd
+config set protected-mode no
+```
+
+Redis set-up finished!
+
 ## Installation
 
 1. Clone this repository
