@@ -1,4 +1,4 @@
-import { extendType, objectType } from "nexus";
+import { extendType, nonNull, objectType, stringArg } from "nexus";
 
 export const Ok = objectType({
     name: 'Ok',
@@ -13,8 +13,10 @@ export const OkQuery = extendType({
     definition(t) {
         t.nonNull.field('ok', {
             type: 'Ok',
+            args: { text: nonNull(stringArg()) },
             description: 'example of query that return type ok',
-            resolve(_root, _args, _ctx) {
+            resolve(_root, args, ctx) {
+                ctx.pubsub.publish('SOMETHING_CHANGED', args.text);
                 return { value: true };
             }
         });
@@ -49,11 +51,7 @@ export const GreetingsSubscriptions = extendType({
             description: 'greetings field for testing subscriptions',
             type: 'String',
             subscribe(root, args, ctx, info) {
-                return (async function* () {
-                    for (const hi of ['Hi', 'Bonjour', 'Hola', 'Ciao', 'Zdravo']) {
-                        yield hi;
-                    }
-                })();
+                return ctx.pubsub.asyncIterator<string>('SOMETHING_CHANGED');;
             },
             resolve(eventData) {
                 return eventData;

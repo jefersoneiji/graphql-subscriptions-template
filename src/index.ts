@@ -29,8 +29,10 @@ app
 const server = app.listen(PORT, function () {
     const wsServer = new WebSocketServer({
         server,
-        path: '/graphql'
+        path: '/graphql',
     });
-    useServer({ schema }, wsServer);
+
+    //DON'T FORGET TO ADD CONTEXT HERE AS WELL
+    useServer({ schema, context }, wsServer);
     console.log(`Server running on http://localhost:${PORT}/graphql`);
 });
