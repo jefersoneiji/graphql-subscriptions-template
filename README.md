@@ -1,8 +1,8 @@
-### Graphql-Typescript template 
+## Graphql-Typescript template 
 
 This template is meant to be used in back-end development. 
 
-### Installation
+## Installation
 
 1. Clone this repository
 ```cmd
@@ -17,14 +17,14 @@ yarn install
 yarn start
 ```
 
-### Accessing GraphiQL
+## Accessing GraphiQL
 
 Use this address
 ```
 http://localhost:4000/graphql
 ```
 
-### Docker
+## Docker
 
 1. To build the image type
 ```cmd
@@ -40,8 +40,14 @@ For vscode, you may use the dev containers extension
 https://code.visualstudio.com/docs/devcontainers/containers
 ```
 
-### Known issues
+## Known issues
 
 Q: After the container is opened, git may show some files as modified although nothing was changed. 
 
 A: In this case, just discard all "changes" and you're good to go.
+
+<hr/>
+
+Q: My GraphiQL doesn' connect to my websocket endpoint.
+
+A: For some reason the websocket endpoint is not connecting to the graphiql interface. Use another GraphQL client, such as Postman. 
