@@ -1,3 +1,12 @@
+<div align="center">
+<img 
+  src="https://github.com/jefersoneiji/graphql-subscriptions-template/assets/44307139/5a375f7e-d6bd-48d9-b6dd-0621db7f04e4"
+  alt="graphql image"
+  height="150"
+  width="150"
+/>
+</div>
+
 <h1 align="center">
   Graphql Subscriptions Template
 </h1>
