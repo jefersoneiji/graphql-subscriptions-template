@@ -1,6 +1,19 @@
-## Graphql-Typescript template 
+<div align="center">
+<img 
+  src="https://github.com/jefersoneiji/graphql-subscriptions-template/assets/44307139/5a375f7e-d6bd-48d9-b6dd-0621db7f04e4"
+  alt="graphql image"
+  height="150"
+  width="150"
+/>
+</div>
 
-This template is meant to be used in back-end development. 
+<h1 align="center">
+  Graphql Subscriptions Template
+</h1>
+
+<p align="center">
+    This template is meant to be used in back-end development. 
+</p>
 
 ## Requirements 
 This template requires a local redis server running on `127.0.0.1:7000` . 
