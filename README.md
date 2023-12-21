@@ -1,6 +1,10 @@
-## Graphql-Typescript template 
+<h1 align="center">
+  Graphql Subscriptions Template
+</h1>
 
-This template is meant to be used in back-end development. 
+<p align="center">
+    This template is meant to be used in back-end development. 
+</p>
 
 ## Requirements 
 This template requires a local redis server running on `127.0.0.1:7000` . 
